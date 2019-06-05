@@ -1,0 +1,43 @@
+.alert {
+
+  display: flex;
+  color: white;
+  font-size: $mfs;
+
+  margin: {
+    top: 5px;
+    bottom: 15px;
+  }
+
+  .container,
+  ul {
+
+    margin: auto;
+  }
+
+  .container,
+  li {
+
+    list-style: none;
+
+    width: 500px;
+    padding: {
+      top: 10px;
+      bottom: 10px;
+    }
+    margin: {
+      top: 5px;
+    }
+
+    background: red;
+    border-radius: 10px;
+
+    text-align: center;
+
+  }
+
+  .container {
+
+    background: green;
+  }
+}

@@ -1,0 +1,39 @@
+.edit {
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: $mfs;
+
+  h1 {
+
+    width: 100%;
+
+    background: blue;
+    color: white;
+
+    text-align: center;
+  }
+
+  input, select {
+
+    font-size: $mfs;
+  }
+
+  & > * {
+
+    margin: auto;
+    text-align: center;
+  }
+
+  button[type='submit'] {
+
+    margin: {
+
+      top: 10px;
+      bottom: 10px;
+    }
+
+    font-size: $mfs;
+  }
+}

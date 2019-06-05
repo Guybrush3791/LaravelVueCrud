@@ -1,0 +1,83 @@
+.show {
+
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+
+    margin: auto;
+    text-align: center;
+  }
+
+  form {
+
+    .btn-primary {
+
+      margin: {
+        top: 10px;
+        bottom: 10px;
+      }
+    }
+  }
+
+  h1 {
+
+    width: 100%;
+
+    background: green;
+    color: white;
+
+    text-align: center;
+  }
+
+  table {
+
+    max-width: 80%;
+
+    border: 0;
+
+
+    color: black;
+
+    font-size: $mfs;
+
+    margin: auto;
+
+    thead {
+      background: $background-main;
+      border: 0;
+
+      & * {
+          border: 0;
+      }
+    }
+    tbody {
+
+      background: yellow;
+    }
+
+    td {
+
+      text-align: center;
+
+      padding: {
+
+        left: 20px;
+        right: 20px;
+      }
+
+      button {
+
+        font-size: $bfs;
+        background: #0000;
+        border: 0;
+      }
+    }
+  }
+
+  a {
+
+    margin: auto;
+    font-size: $bfs;
+  }
+}
