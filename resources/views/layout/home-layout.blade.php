@@ -13,26 +13,19 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <div class="container">
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
-
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-
-            </div>
-        </div>
-    </nav>
-
     <header>
       <h1>
+        <img src="
+        @php
+          echo 'https://github.com/';
+          echo env('GITHUB_USERNAME');
+          echo '.png';
+        @endphp
+        " alt="">
         <a href="{{ route('home') }}">
           Hello World from Header
         </a>
+        <img src="{{ asset('img/me_icon.gif') }}" alt="">
       </h1>
     </header>
 

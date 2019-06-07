@@ -14,12 +14,12 @@
             $post = $posts[0]
           @endphp --}}
 
-          <post-card-adv
+          <post-card
               post-id = '{{ $post -> id }}'
               title = '{{ $post -> title }}'
               content = '{{ $post -> content }}'
               likes = '{{ $post -> likes }}'>
-          </post-card-adv>
+          </post-card>
         @endforeach
     </div>
   </div>
