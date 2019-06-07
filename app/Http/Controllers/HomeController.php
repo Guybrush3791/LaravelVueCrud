@@ -13,5 +13,5 @@ class HomeController extends Controller
       $posts = Post::all();
 
       return view('page.posts', compact('posts'));
-    }
+    }// tmptmp
 }
