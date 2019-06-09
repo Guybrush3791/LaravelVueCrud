@@ -12,6 +12,7 @@
 
 // Include others scss files
 @import 'alert';
+@import 'animation';
 @import 'card';
 @import 'edit';
 @import 'footer';
@@ -28,4 +29,10 @@
 body {
 
   background: $background-main;
+
+  margin: {
+
+    top: 30px;
+    bottom: 30px;
+  }
 }

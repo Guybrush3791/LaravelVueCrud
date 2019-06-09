@@ -15,7 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .browserSync({
 
-        proxy: '192.168.1.200',
+        proxy: '192.168.43.200',
         open: false,
         notify: false
      });

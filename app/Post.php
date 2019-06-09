@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Tag;
 
 class Post extends Model
 {
@@ -12,4 +13,9 @@ class Post extends Model
       'content',
       'likes'
     ];
+
+    function tags() {
+
+      return $this -> belongsToMany(Tag::class);
+    }
 }
