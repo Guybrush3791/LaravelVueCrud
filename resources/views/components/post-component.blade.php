@@ -10,6 +10,9 @@
       <div class="card-content">
         <p @click="focusField('content')" v-show="!showField('content')" class="card-content-text">@{{ shortcontent }}</p>
         <textarea v-show="showField('content')" v-model.trim="postContent"></textarea>
+        <div class="tags" >
+          <a href="#" v-for="tag in postTags" v-text="tag.name"></a>
+        </div>
       </div>
       <div class="card-footer">
         <div class="likes" @click="setLiked()">
@@ -32,15 +35,17 @@
         editField: '',
 
         postTitle: this.title,
-        postContent: this.content
+        postContent: this.content,
+
+        postTags: this.tags
       }
     },
     props: {
-
-      postId: String,
+      postId: Number,
       title: String,
       content: String,
-      likes: String
+      likes: Number,
+      tags: Array
     },
     computed: {
 
@@ -56,8 +61,7 @@
 
       postLike: function() {
 
-        var tmpLikes = Number(this.likes) + (this.liked ? 1 : 0);
-        return tmpLikes;
+        return this.likes + (this.liked ? 1 : 0);
       }
     },
     methods: {

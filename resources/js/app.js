@@ -82,6 +82,21 @@ function init2() {
   });
 }
 
+function foo() {
+
+  if (!Array.prototype.forEach)
+    Array.prototype.forEach = function(fn){
+      for ( var i = 0; i < this.length; i++ ) {
+        fn( this[i], i, this );
+      }
+    };
+
+
+  ["a", "b", "c"].forEach(function(value, index, array){
+    console.log(value, "Is in position " + index + " out of " + (array.length - 1) );
+  });
+
+}
 function init() {
 
   token = $('meta[name="csrf-token"]').attr('content');
@@ -90,6 +105,8 @@ function init() {
   new Vue({
     el: "#app"
   });
+
+  foo();
 }
 
 $(document).ready(init);
